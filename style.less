@@ -1,0 +1,61 @@
+
+table{
+    width: 100%;
+    border-spacing: 0;
+    td{
+        padding: 6px;
+        border: 1px solid #ddd;
+    }
+}
+
+ul{
+    margin-bottom: 30px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    li{
+        list-style: none;
+    }
+}
+
+
+//necessary css
+.tabsTable{
+    overflow: hidden;
+    .tableTransormTabsControls{
+        display: flex;
+        justify-content: space-between;
+        li{
+            padding-left: 0px!important;
+            color: #ddd;
+            transition:0.3s;
+            &:before{
+                display:none;
+            }
+            &.active{
+                color: #000;
+                text-decoration: underline;
+            }
+        }
+    }
+    .tabsHolder{
+        width: 100%;
+        margin-bottom: 40px;
+        position: absolute;
+        opacity: 0;
+        left: -300px;
+        transition:0.5s;
+        p{
+            margin-bottom: 12px;
+            span{
+                font-weight: 600;
+            }
+        }
+        &.active{
+            display: block;
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+}
